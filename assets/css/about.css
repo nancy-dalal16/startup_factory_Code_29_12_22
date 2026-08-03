@@ -1,0 +1,194 @@
+.hightlight-block p {
+    margin-bottom: 0px;
+}
+
+.contact-block {
+    background: #1B2947 0% 0% no-repeat padding-box;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    width: 32%;
+    margin-bottom: 1rem;
+    z-index: 7;
+}
+
+.contact-block h4 {
+    font-size: 1.5rem;
+    line-height: 2.4rem;
+    color: var(--lightgray);
+    font-weight: var(--bold);
+    margin-top: 1rem;
+}
+
+.contact-block img {
+    max-width: 4rem;
+    display: block;
+    margin: 0px auto 1rem auto;
+}
+
+.back {
+    background: var(--lightblue) 0% 0% no-repeat padding-box;
+    border-radius: 8px;
+    opacity: 1;
+    width: 100%;
+    margin-left: 0px;
+    padding: 1rem;
+}
+
+.back img {
+    width: 100%;
+}
+
+.hightlight-block {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    border-radius: 0px 0px 0.8rem 0.8rem;
+    background-color: var(--white);
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+}
+
+.hightlight-block h3 {
+    font-size: 1.6rem;
+    font-weight: var(--bold);
+    letter-spacing: 0px;
+    color: var(--lightblue);
+}
+
+.hightlight-block p {
+    line-height: 1.3rem;
+    font-weight: var(--regular);
+    color: #6C7793;
+}
+
+.social h2 {
+    text-align: left;
+    font-size: 2.5rem;
+    line-height: 4.8rem;
+    font-family: 'mascot-mvb-rough-1', sans-serif;
+    font-weight: var(--regular);
+    letter-spacing: 0px;
+    color: #6C7793;
+}
+
+.social {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.icons .bx-sm {
+    color: var(--primary);
+    background: var(--darkblue);
+    border-radius: 8px;
+    padding: 0.5rem;
+    margin-left: 10px;
+}
+
+.icons .bx-sm:hover {
+    color: var(--darkblue);
+    background: #f2b200;
+}
+
+.design-circle {
+    z-index: -1;
+}
+
+.image-holder img {
+    width: 100%;
+}
+
+.back-card {
+    background: var(--lightblue) 0% 0% no-repeat padding-box;
+    border-radius: 8px;
+    opacity: 1;
+    backdrop-filter: blur(2px);
+    padding: 1.5rem 1rem;
+}
+
+.back-card h5 {
+    font-size: 1.1rem;
+    line-height: 1.6rem;
+    color: var(--white);
+}
+
+.social-block {
+    display: block;
+    position: absolute;
+    top: 75%;
+    right: 1rem;
+}
+
+.social-block a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--darkblue);
+    padding: 10px;
+    color: var(--primary);
+    position: relative;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    z-index: 3;
+    bottom: 3rem;
+    width: 3rem;
+    height: 3rem;
+}
+
+.social-block a:hover {
+    color: var(--darkblue);
+    background: #f2b200;
+}
+
+@media screen and (max-width:992px) {
+    .hightlight-block {
+        position: unset;
+        width: 100%;
+    }
+}
+
+@media(max-width:768px) {
+    .contact-block {
+        width: 100%;
+    }
+    .ceoPhoto {
+        padding: 0px;
+    }
+    .hightlight-block {
+        margin-bottom: 1rem;
+    }
+    .design-circle,
+    .design-dots {
+        display: none;
+    }
+    #photocard {
+        margin-top: 0px !important;
+    }
+}
+
+
+/* --- Vision / Mission / Values icons ---
+   Source PNGs are solid #0C55BE, which is nearly invisible on the dark
+   card background. Render them light, matching the homepage treatment. */
+
+.contact-block img {
+    filter: brightness(0) invert(1);
+    opacity: 0.85;
+    transition: all 0.3s;
+}
+
+.contact-block:hover img {
+    opacity: 1;
+}
+
+/* Founder photo card (live layout: photo wrapped in .ceoPhoto) */
+.ceoPhoto img {
+    width: 100%;
+    display: block;
+    border-radius: 0.5rem;
+}
+
+.ceoPhoto .hightlight-block {
+    border-radius: 0px 0px 0.5rem 0.5rem;
+}

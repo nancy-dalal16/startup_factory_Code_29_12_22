@@ -1,0 +1,122 @@
+/* The promo box sits on top of the footer, so it is a shade DARKER than the
+   footer (not the same navy) and lifts off it with a border + shadow.
+   Orange stays reserved for the button. */
+#cta {
+    padding-top: 4rem;
+    position: relative;
+    z-index: 5;
+}
+
+.cta-block {
+    background: var(--darkblue);
+    border: 1px solid rgba(239, 130, 2, 0.45);
+    box-shadow: 0 1.5rem 3rem rgba(2, 9, 24, 0.55);
+    padding: 3.5rem 4rem;
+    border-radius: 2rem;
+    position: relative;
+}
+
+.cta-block h2 {
+    font-size: 2.125rem;
+    font-weight: var(--bold);
+    color: var(--lightgray);
+    margin-bottom: 1rem;
+}
+
+.cta-block p.inverse {
+    color: #A7B5C4;
+}
+
+.cta-block .btn-primary {
+    box-shadow: 0 0.5rem 1.5rem rgba(239, 130, 2, 0.35);
+}
+
+footer {
+    padding: 12rem 0px 2rem;
+    background: var(--lightblue);
+    border-radius: 10rem 10rem 0px 0px;
+    margin-top: -6rem;
+    position: relative;
+    z-index: 1;
+}
+
+.footer-block h4 {
+    font-size: 1.25rem;
+    color: var(--lightgray);
+    font-weight: var(--medium);
+    margin-bottom: 1rem;
+}
+
+.cont-block i {
+    font-size: 1.5rem;
+    min-width: 2rem;
+    color: var(--primary);
+    display: block;
+}
+
+.cont-block p {
+    margin-bottom: 0px;
+}
+
+.cont-block {
+    margin-top: 1rem;
+}
+
+.footerlink li a {
+    padding: 0.25rem 0px;
+    line-height: 1.4rem;
+    color: #A7B5C4;
+    font-size: 1rem;
+    display: inline-block;
+    transition: all 0.3s;
+}
+
+.footerlink li a:hover {
+    color: var(--primary);
+}
+
+.footer-bottom {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #223253;
+}
+
+@media screen and (max-width:992px) {
+    .cta-block h2 {
+        font-size: 2rem;
+    }
+    .cta-block {
+        padding: 2.5rem;
+    }
+    footer {
+        padding-top: 10rem;
+        border-radius: 5rem 5rem 0px 0px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .footer-bottom {
+        display: block !important;
+    }
+}
+
+@media screen and (max-width:680px) {
+    .cta-block h2 {
+        font-size: 1.5rem;
+    }
+    .footer-bottom {
+        display: block !important;
+        text-align: center;
+    }
+    .cta-block {
+        padding: 2rem;
+        border-radius: 1.25rem;
+    }
+    #cta {
+        padding-top: 2rem;
+    }
+    footer {
+        padding-top: 8rem;
+        border-radius: 3rem 3rem 0px 0px;
+    }
+}

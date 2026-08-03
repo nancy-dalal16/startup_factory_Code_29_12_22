@@ -1,0 +1,256 @@
+#hero {
+    background: url("../images/home/banner_bg.png") no-repeat center top;
+    min-height: 100vh;
+    background-size: cover;
+    position: relative;
+}
+
+video {
+    width: 100%;
+    margin-top: -55px;
+}
+
+.banner-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9;
+    max-width: 600px;
+}
+
+.bannerBtn-holder {
+    margin-bottom: 12rem;
+}
+
+.reasonBlock {
+    padding: 2rem;
+    border-radius: 0.5rem;
+    background: var(--lightblue) 0% 0% no-repeat padding-box;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    width: 32%;
+    margin-top: 2rem;
+    position: relative;
+    z-index: 7;
+    opacity: 0.8;
+}
+
+.reasonBlock i {
+    font-size: 4rem;
+    color: var(--lightgray);
+    margin-bottom: 1rem;
+}
+
+.reasonBlock img {
+    width: 4rem;
+    height: auto;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.reasonBlock h4 {
+    font-size: 1.25rem;
+    font-weight: var(--bold);
+    color: var(--lightgray);
+    margin-bottom: 0.75rem;
+}
+
+.reasonBlock p {
+    margin-bottom: 0px;
+}
+
+#why .design-blob {
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin-top: 0;
+}
+
+.testimonials-holder {
+    background: url("../images/grid.svg") no-repeat center;
+}
+
+.testimonial-block {
+    padding: 3rem;
+    background: rgb(40 58 96 / 52%) 0% 0% no-repeat padding-box;
+    border-radius: 8px;
+    opacity: 1;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(3px);
+    margin-top: 3rem;
+}
+
+.testimonial-block .photo {
+    width: 6.25rem;
+    height: 6.25rem;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0px auto 2rem auto;
+}
+
+.testimonial-block .photo img {
+    width: 100%;
+}
+
+.testimonial {
+    max-width: 26.25rem;
+    margin: auto;
+}
+
+.divider {
+    width: 8.125rem;
+    height: 2px;
+    background-color: #364A7E;
+    margin: 2rem auto;
+}
+
+.testimonial h5 {
+    font-size: 1.5rem;
+    color: var(--primary);
+    font-weight: var(--bold);
+    margin-bottom: 0.25rem;
+}
+
+.testimonials-holder .design-dots {
+    left: -6rem;
+    bottom: -6rem;
+    right: auto;
+    top: auto;
+    z-index: -1;
+}
+
+.testimonials-holder .design-circle {
+    right: -7rem;
+    left: auto;
+    top: -7rem;
+    z-index: -1;
+}
+
+.testimonials-holder .design-blob {
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin-top: 0;
+}
+
+.owl-nav button.owl-next {
+    position: absolute;
+    right: -10rem;
+}
+
+.owl-nav button.owl-prev {
+    position: absolute;
+    left: -10rem;
+}
+
+.owl-nav button span {
+    width: 4rem;
+    height: 4rem;
+    background-color: var(--lightblue);
+    display: block;
+    color: var(--primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+}
+
+.owl-nav button.disabled span {
+    color: #566686;
+}
+
+.service-block {
+    padding: 2rem;
+    background: rgb(40 58 96 / 52%) 0% 0% no-repeat padding-box;
+    border-radius: 0.5rem;
+    opacity: 1;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(3px);
+    margin-top: 1rem;
+    width: 24%;
+}
+
+.service-block img {
+    max-width: 100%;
+    display: block;
+    margin: 0px auto 1rem auto;
+}
+
+.service-block h5 {
+    font-size: 1.125rem;
+    font-weight: var(--semibold);
+    color: var(--lightgray);
+    line-height: 1.4;
+}
+
+#services {
+    background: url(../images/home/service-bg.png) no-repeat center bottom;
+    background-size: cover;
+}
+
+
+
+
+@media screen and (max-width: 992px) {
+    .heading {
+        font-size: 2rem;
+    }
+
+    #hero {
+        min-height: 100%;
+    }
+
+    .banner-content {
+        top: 60%;
+    }
+
+    video {
+        margin-top: 0px;
+    }
+
+    .reasons-holder {
+        display: block !important;
+    }
+
+    .reasonBlock {
+        width: 100%;
+    }
+
+    .service-block {
+        width: 48%;
+    }
+}
+
+@media(max-width:560px) {
+    .heading {
+        font-size: 1.125rem;
+    }
+
+    .banner-content {
+        top: 75%;
+    }
+
+    .btn-primary.btn-with-icon {
+        font-size: 0.8rem;
+        padding: 0.2rem 0.2rem 0.2rem 0.8rem;
+    }
+
+    .btn-icon {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    .btn-icon i {
+        font-size: 1rem;
+
+    }
+
+    .owl-nav {
+        display: none;
+    }
+
+    .testimonials-holder {
+        overflow: hidden;
+    }
+
+}

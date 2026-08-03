@@ -1,0 +1,85 @@
+.cta-block {
+    background: var(--primary);
+    padding: 3rem 4rem;
+    border-radius: 2rem;
+}
+
+.cta-block h2 {
+    font-size: 2.625rem;
+    font-weight: var(--bold);
+    color: var(--white);
+    margin-bottom: 1rem;
+}
+
+footer {
+    padding: 14rem 0px 2rem;
+    background: var(--lightblue);
+    border-radius: 10rem 10rem 0px 0px;
+    margin-top: -10rem;
+}
+
+.footer-block h4 {
+    font-size: 1.125rem;
+    color: var(--lightgray);
+    font-weight: var(--medium);
+    margin-bottom: 1rem;
+}
+
+.cont-block i {
+    font-size: 1.5rem;
+    min-width: 2rem;
+    color: var(--primary);
+    display: block;
+}
+
+.cont-block p {
+    margin-bottom: 0px;
+}
+
+.cont-block {
+    margin-top: 1rem;
+}
+
+.footerlink li a {
+    padding: 0.25rem 0px;
+    line-height: 1.4rem;
+    color: #A7B5C4;
+    font-size: 1rem;
+    display: inline-block;
+    transition: all 0.3s;
+}
+
+.footerlink li a:hover {
+    color: var(--primary);
+}
+
+.footer-bottom {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #223253;
+}
+
+
+@media screen and (max-width:992px) {
+    .cta-block h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width:680px) {
+    .footer-bottom {
+        display: block !important;
+        text-align: center;
+    }
+
+    .cta-block {
+        padding: 1rem 2rem
+    }
+
+}
+
+@media screen and (max-width:560px) {
+    .cta-block h2 {
+        font-size: 1.125rem;
+    }
+}

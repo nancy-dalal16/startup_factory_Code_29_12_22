@@ -1,0 +1,728 @@
+#hero {
+    background: url("../images/home/banner_bg.png") no-repeat center top;
+    min-height: 100vh;
+    background-size: cover;
+    position: relative;
+}
+
+video {
+    width: 100%;
+    margin-top: -3.5rem;
+}
+
+.banner-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9;
+    width: 100%;
+}
+
+.bannerBtn-holder {
+    margin-bottom: 12rem;
+}
+
+.reasonBlock {
+    padding: 2rem;
+    border-radius: 0.5rem;
+    background: var(--lightblue) 0% 0% no-repeat padding-box;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    width: 32%;
+    margin-top: 2rem;
+    position: relative;
+    z-index: 7;
+    opacity: 0.8;
+}
+
+.reasonBlock img {
+    max-width: 5rem;
+    margin-bottom: 1rem;
+}
+
+.reasonBlock h4 {
+    font-size: 1.25rem;
+    font-weight: var(--bold);
+    color: var(--lightgray);
+    margin-bottom: 0.75rem;
+}
+
+.reasonBlock p {
+    margin-bottom: 0px;
+}
+
+#why .design-blob {
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin-top: 0;
+}
+
+.testimonials-holder {
+    background: url("../images/grid.svg") no-repeat center;
+}
+
+.testimonial-block {
+    padding: 3rem;
+    background: rgb(40 58 96 / 52%) 0% 0% no-repeat padding-box;
+    border-radius: 8px;
+    opacity: 1;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(3px);
+    margin-top: 3rem;
+}
+
+.testimonial-block .photo {
+    width: 6.25rem;
+    height: 6.25rem;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0px auto 2rem auto;
+}
+
+.testimonial-block .photo img {
+    width: 100%;
+}
+
+.testimonial {
+    max-width: 26.25rem;
+    margin: auto;
+}
+
+.divider {
+    width: 8.125rem;
+    height: 2px;
+    background-color: #364A7E;
+    margin: 2rem auto;
+}
+
+.testimonial h5 {
+    font-size: 1.5rem;
+    color: var(--primary);
+    font-weight: var(--bold);
+    margin-bottom: 0.25rem;
+}
+
+.testimonials-holder .design-dots {
+    left: -6rem;
+    bottom: -6rem;
+    right: auto;
+    top: auto;
+    z-index: -1;
+}
+
+.testimonials-holder .design-circle {
+    right: -7rem;
+    left: auto;
+    top: -7rem;
+    z-index: -1;
+}
+
+.testimonials-holder .design-blob {
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin-top: 0;
+}
+
+.owl-nav button.owl-next {
+    position: absolute;
+    right: -10rem;
+}
+
+.owl-nav button.owl-prev {
+    position: absolute;
+    left: -10rem;
+}
+
+.owl-nav button span {
+    width: 4rem;
+    height: 4rem;
+    background-color: var(--lightblue);
+    display: block;
+    color: var(--primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+}
+
+.owl-nav button.disabled span {
+    color: #566686;
+}
+
+.service-block {
+    padding: 2rem;
+    background: rgb(40 58 96 / 52%) 0% 0% no-repeat padding-box;
+    border-radius: 0.5rem;
+    opacity: 1;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(3px);
+    margin-top: 1rem;
+    width: 24%;
+}
+
+.service-block img {
+    max-width: 4rem;
+    display: block;
+    margin: 0px auto 1rem auto;
+}
+
+.service-block h5 {
+    font-size: 1.125rem;
+    font-weight: var(--regular);
+    color: var(--lightgray);
+    line-height: 1.4;
+}
+
+#services {
+    background: url(../images/home/service-bg.png) no-repeat center bottom;
+    background-size: cover;
+}
+
+@media screen and (max-width: 1366px) {
+    video {
+        margin-top: 0px;
+        position: absolute;
+        bottom: -2.75rem;
+    }
+    .bannerBtn-holder {
+        margin-bottom: 0px;
+    }
+    .banner-content {
+        padding: 0px 2rem;
+        top: 38%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    video {
+        margin-top: 0px;
+    }
+    .reasons-holder {
+        display: block !important;
+    }
+    .reasonBlock {
+        width: 100%;
+        margin-top: 1rem;
+    }
+    .service-block {
+        width: 49%;
+    }
+}
+
+@media(max-width:680px) {
+    .banner-content {
+        top: 50%;
+    }
+    video {
+        bottom: 0;
+    }
+    .design-circle,
+    .design-dots {
+        display: none;
+    }
+    .service-block {
+        width: 100%;
+    }
+    .owl-nav {
+        display: none;
+    }
+    .testimonials-holder {
+        overflow: hidden;
+    }
+}
+
+
+/* ==========================================================================
+   Home page - 2026 content sections
+   (hero support, startup math, numbered reasons, process, comparison, FAQ)
+   ========================================================================== */
+
+/* --- Hero layout ---
+   The banner now carries an eyebrow + sub-copy, so the absolutely centred
+   block from the base layout overflowed the 100vh hero. The hero is a flow
+   column instead: header space, centred copy, then the video at the bottom. */
+
+#hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 12rem;
+    overflow: hidden;
+}
+
+.banner-content {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    width: 100%;
+    padding: 0px 1.5rem;
+}
+
+#hero video {
+    position: relative;
+    bottom: auto;
+    margin-top: 3rem;
+    margin-bottom: 0px;
+}
+
+.bannerBtn-holder {
+    margin-bottom: 0px;
+}
+
+/* --- Hero support --- */
+
+.eyebrow {
+    font-size: 1rem;
+    font-weight: var(--medium);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--primary);
+    margin-bottom: 1.25rem;
+}
+
+.banner-subcopy {
+    max-width: 46rem;
+    margin: 0px auto;
+    color: var(--lightgray);
+    line-height: 1.7;
+}
+
+/* --- Startup math / stat cards --- */
+
+.statBlock {
+    padding: 2rem;
+    border-radius: 0.5rem;
+    background: var(--lightblue) 0% 0% no-repeat padding-box;
+    border: 1px solid #223253;
+    transition: all 0.3s;
+}
+
+.statBlock:hover {
+    border-color: var(--primary);
+    transform: translateY(-4px);
+}
+
+.statValue {
+    font-size: 2.5rem;
+    font-weight: var(--bold);
+    color: var(--primary);
+    line-height: 1.1;
+    margin-bottom: 0.75rem;
+}
+
+.statValue.statValue-sm {
+    font-size: 1.5rem;
+    color: var(--lightgray);
+}
+
+.statBlock p {
+    margin-bottom: 0px;
+}
+
+.quoteBlock {
+    background: rgb(40 58 96 / 52%) 0% 0% no-repeat padding-box;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(3px);
+}
+
+.quoteBlock i {
+    font-size: 2rem;
+    color: var(--primary);
+    display: block;
+    margin-bottom: 0.75rem;
+}
+
+.quoteBlock .quoteText {
+    color: var(--lightgray);
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.quoteBlock h5 {
+    font-size: 1rem;
+    font-weight: var(--medium);
+    color: var(--primary);
+    margin-bottom: 0px;
+}
+
+/* --- Numbered reason cards --- */
+
+.reasonBlock.numbered {
+    width: 100%;
+    margin-top: 0px;
+    padding: 2.5rem 2rem 2rem;
+    opacity: 1;
+    border: 1px solid #223253;
+    transition: all 0.3s;
+}
+
+.reasonBlock.numbered:hover {
+    border-color: var(--primary);
+}
+
+.reasonNumber {
+    display: block;
+    font-size: 1.125rem;
+    font-weight: var(--bold);
+    color: var(--primary);
+    letter-spacing: 0.1em;
+    margin-bottom: 0.75rem;
+}
+
+/* --- Process --- */
+
+.processHolder {
+    position: relative;
+    padding-left: 1rem;
+}
+
+.processHolder::before {
+    content: "";
+    position: absolute;
+    left: 2.5rem;
+    top: 1.5rem;
+    bottom: 1.5rem;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--primary), #223253);
+}
+
+.processStep {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 2.5rem;
+}
+
+.processStep:last-child {
+    margin-bottom: 0px;
+}
+
+.processMarker {
+    flex: 0 0 3rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background: var(--darkblue);
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    font-weight: var(--bold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.processContent {
+    background: var(--lightblue) 0% 0% no-repeat padding-box;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    flex: 1;
+}
+
+.processContent h4 {
+    font-size: 1.25rem;
+    font-weight: var(--medium);
+    color: var(--lightgray);
+    margin-bottom: 0.5rem;
+}
+
+.processContent p {
+    margin-bottom: 0px;
+}
+
+/* --- Comparison table --- */
+
+.compareTable {
+    border: 1px solid #223253;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.compareRow {
+    display: flex;
+    align-items: stretch;
+    border-bottom: 1px solid #223253;
+}
+
+.compareRow:last-child {
+    border-bottom: 0px;
+}
+
+.compareCell {
+    flex: 1;
+    padding: 1.25rem 1.5rem;
+    color: #A7B5C4;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.compareCell.compareLabel {
+    flex: 0 0 32%;
+    color: var(--lightgray);
+    font-weight: var(--medium);
+    background: rgb(27 41 71 / 60%);
+}
+
+.compareCell.compareUs {
+    background: rgb(239 130 2 / 8%);
+    color: var(--lightgray);
+    font-weight: var(--medium);
+}
+
+.compareHead {
+    background: var(--lightblue);
+}
+
+.compareHead .compareCell {
+    font-weight: var(--bold);
+    color: var(--lightgray);
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    letter-spacing: 0.05em;
+}
+
+.compareHead .compareCell.compareUs {
+    color: var(--primary);
+}
+
+/* --- Services grid additions --- */
+
+.sectionIntro {
+    max-width: 42rem;
+    margin: 0px auto;
+}
+
+.service-block p {
+    margin-top: 0.75rem;
+    margin-bottom: 0px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.seeAllLink {
+    color: var(--primary);
+    font-weight: var(--medium);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    transition: all 0.3s;
+}
+
+.seeAllLink:hover {
+    color: #f2b200;
+}
+
+/* --- FAQ accordion --- */
+
+.faqItem {
+    background: var(--lightblue) 0% 0% no-repeat padding-box;
+    border: 1px solid #223253;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    transition: all 0.3s;
+}
+
+.faqItem.active {
+    border-color: var(--primary);
+}
+
+.faqQuestion {
+    width: 100%;
+    background: transparent;
+    border: 0px;
+    text-align: left;
+    padding: 1.25rem 1.5rem;
+    color: var(--lightgray);
+    font-size: 1.125rem;
+    font-weight: var(--medium);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    cursor: pointer;
+}
+
+.faqQuestion i {
+    font-size: 1.5rem;
+    color: var(--primary);
+    transition: transform 0.3s;
+    flex-shrink: 0;
+}
+
+.faqItem.active .faqQuestion i {
+    transform: rotate(45deg);
+}
+
+.faqAnswer {
+    display: none;
+    padding: 0px 1.5rem 1.5rem;
+}
+
+.faqItem.active .faqAnswer {
+    display: block;
+}
+
+.faqAnswer p {
+    margin-bottom: 0px;
+    line-height: 1.7;
+}
+
+/* --- Responsive --- */
+
+@media screen and (max-width: 992px) {
+    .statValue {
+        font-size: 2rem;
+    }
+    .compareCell {
+        padding: 1rem;
+    }
+}
+
+@media(max-width:680px) {
+    .banner-subcopy {
+        font-size: 0.95rem;
+    }
+    .bannerBtn-holder {
+        margin-bottom: 0px;
+    }
+    .processHolder {
+        padding-left: 0px;
+    }
+    .processHolder::before {
+        display: none;
+    }
+    .processStep {
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    .processMarker {
+        flex: 0 0 2.5rem;
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+    .compareRow {
+        display: block;
+    }
+    .compareHead {
+        display: none;
+    }
+    .compareCell {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        padding: 0.75rem 1rem;
+    }
+    .compareCell.compareLabel {
+        flex: 1 1 auto;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        letter-spacing: 0.05em;
+    }
+    .compareCell[data-label]::before {
+        content: attr(data-label);
+        color: #6C7793;
+        font-size: 0.8rem;
+    }
+    .faqQuestion {
+        font-size: 1rem;
+        padding: 1rem;
+    }
+    .faqAnswer {
+        padding: 0px 1rem 1rem;
+    }
+}
+
+
+/* --- Change list: service cards are links, icons legible, founder card --- */
+
+a.service-block {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    border: 1px solid transparent;
+    transition: all 0.3s;
+}
+
+a.service-block:hover {
+    border-color: var(--primary);
+    transform: translateY(-4px);
+}
+
+/* Source icons are solid #0C55BE, which all but disappears on the dark
+   background - render them light, and reserve orange for the hover state. */
+.service-block img {
+    filter: brightness(0) invert(1);
+    opacity: 0.85;
+    transition: all 0.3s;
+}
+
+a.service-block:hover img {
+    opacity: 1;
+}
+
+a.service-block:hover h5 {
+    color: var(--primary);
+}
+
+.leadIn {
+    color: var(--lightgray);
+    font-weight: var(--medium);
+}
+
+.founderCard {
+    position: relative;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    background: var(--lightblue);
+    border: 1px solid #223253;
+    max-width: 30rem;
+    margin: 0px auto;
+}
+
+.founderCard img {
+    width: 100%;
+    display: block;
+}
+
+.founderCaption {
+    padding: 1.25rem 1.5rem;
+    text-align: center;
+}
+
+.founderCaption h3 {
+    font-size: 1.5rem;
+    font-weight: var(--bold);
+    color: var(--lightgray);
+    margin-bottom: 0.25rem;
+}
+
+.founderCaption p {
+    margin-bottom: 0px;
+    color: var(--primary);
+}
+
+#aboutUs .btn-holder .btn-secondary {
+    margin-top: 0px;
+}
+
+@media(max-width:680px) {
+    #aboutUs .btn-holder .btn-secondary {
+        margin: 1rem 0px 0px 0px !important;
+    }
+}
+
+
+/* --- Change list #17: hero is now static (no video), so it carries the
+   background treatment itself instead of relying on the clip. --- */
+
+#hero {
+    background: url("../images/banner_bg.png") no-repeat center top, var(--darkblue);
+    background-size: cover;
+    padding: 12rem 0px 7rem;
+}

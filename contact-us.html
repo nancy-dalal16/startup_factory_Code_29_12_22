@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to The Startup Factory</title>
+
+    <!-- CSS References -->
+    <link rel=" stylesheet " href="assets/css/bootstrap.min.css " />
+    <link rel="stylesheet " href="assets/css/common.css " />
+    <link rel="stylesheet " href="assets/css/header.css " />
+    <link rel="stylesheet " href="assets/css/footer.css " />
+    <link rel="stylesheet " href="assets/css/contact.css" />
+
+    <!-- JS References -->
+    <script src="assets/js/jquery.js "></script>
+
+    <!-- Font References -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+
+
+    <!-- Icons References -->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon" />
+
+</head>
+
+<body id="innerPage">
+
+    <!-- Banner Section Starts -->
+    <section id="innerhero">
+        <!--Header Starts-->
+        <header class="header">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-sm-2 col-5">
+                        <a href="index.html" id="logo">
+                            <img src="assets/images/logo.png" alt="Startup Factory Logo" />
+                        </a>
+                    </div>
+                    <div class="col-sm-5 col-1">
+                        <div class="navigationHolder">
+                            <ul class="navigation list-unstyled">
+                                <li class="menuHeader d-flex align-items-center justify-content-between">
+                                    <img src="assets/images/logo.png" alt="logo" />
+                                    <a href="javascript:void(0)" class="menuClose">&times;</a>
+                                </li>
+                                <li>
+                                    <a href="services.html">Services</a>
+                                </li>
+                                <li>
+                                    <a href="about-us.html">About Us</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-5 col-6">
+                        <div class="right-head d-flex align-items-center justify-content-end">
+                            <div class="text-right">
+                                <a href="contact-us.html" class="btn-secondary">Contact Us</a>
+                            </div>
+                            <div class="mobile-navbar-btn">
+                                <i class='bx bx-menu bx-md mobile-nav-icon' name="menu-outline"></i>
+                                <i class='bx bx-menu-alt-right bx-md mobile-nav-icon' name="close-outline"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!--Header Ends-->
+
+        <div class="inner-banner text-center">
+            <div class="row">
+                <div class="col-md-4 offset-md-4 position-relative">
+                    <h1 class="heading"><span>Contact</span> Us</h1>
+                    <p class="mt-2">
+                        Tell us where you're stuck. We'll scope the team and show you the math - no deck required.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+    <!-- Banner Section Ends -->
+
+    <!-- Services Section Starts -->
+    <section id="contacts" class="page-section pt-0">
+        <div class="container">
+            <div class="contacts-holder d-flex align-items-stretch justify-content-between flex-wrap">
+                <div class="contact-block text-center">
+                    <i class='bx bx-envelope'></i>
+                    <h4>Email us</h4>
+                    <p><a
+                            href="mailto:startup.success@the-startupfactory.com">startup.success@the-startupfactory.com</a>
+                    </p>
+                </div>
+                <div class="contact-block text-center">
+                    <i class='bx bx-calendar-check'></i>
+                    <h4>Book a call</h4>
+                    <p>A 30-minute intro call with our founder.</p>
+                    <!-- TODO: replace "#booking-link" with your scheduling URL (Calendly / SavvyCal) -->
+                    <a href="#booking-link" class="btn-secondary mt-3">Book a 30-min intro call</a>
+                </div>
+                <div class="contact-block text-center">
+                    <i class='bx bx-map'></i>
+                    <h4>Based in</h4>
+                    <p>Carlsbad, California, USA</p>
+                    <p class="contactNote">Engineering team offshore in India, US hours overlap daily.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Services Section Ends -->
+
+    <!-- Form Section Starts -->
+    <Section id="contactForm" class="page-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                    <div class="formholder formCard">
+                        <h3 class="sectionTitle"><span>Drop us</span> a message</h3>
+                        <p>Prefer to type? Send the details and we'll reply within one business day.</p>
+                        <form name="contact-form">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Name" />
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" placeholder="Email" />
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Mobile" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" placeholder="Message"></textarea>
+                            </div>
+                            <div class="alert alert-danger mt-4" role="alert" style="display:none;">
+                                Please fill the missing field(s)
+                            </div>
+                            <div class="formBtn">
+                                <a href="contact-us.html"
+                                    class="btn-primary btn-with-icon leftAligned d-flex align-items-center">
+                                    Submit
+                                    <span class="btn-icon d-flex align-items-center justify-content-center"><i
+                                            class="bx bx-right-arrow-alt"></i></span>
+                                </a>
+                            </div>
+                            <div class="alert alert-success mt-4" role="alert" style="display:none;">
+                                Form Submitted Successfully!
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </Section>
+    <!-- Form Section Ends -->
+
+
+    <!-- CTA Section starts -->
+    <section id="cta">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-md-8 offset-md-2">
+                    <div class="cta-block">
+                        <h2>
+                            Helping you build your product and startup with high quality engineering talent and low
+                            cost
+                        </h2>
+                        <div class="text-center mt-4">
+                            <a href="contact-us.html" class="btn-primary btn-with-icon d-flex align-items-center">
+                                Get in touch with us
+                                <span class="btn-icon d-flex align-items-center justify-content-center"><i
+                                        class="bx bx-right-arrow-alt"></i></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- CTA Section ends -->
+
+    <!-- Footer Section Starts -->
+    <footer>
+        <div class="container">
+            <div class="row gy-5">
+                <div class="col-md-4">
+                    <div class="footer-block">
+                        <h4>Contact Details</h4>
+                        <div class="cont-block d-flex align-items-center">
+                            <i class='bx bx-envelope'></i>
+                            <p>startup.success@the-startupfactory.com</p>
+                        </div>
+                        <div class="cont-block d-flex align-items-center">
+                            <i class='bx bx-map'></i>
+                            <p>Carlsbad, California, USA</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-12">
+                    <div class="footer-block">
+                        <h4>Services</h4>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <ul class="list-unstyled footerlink">
+                                    <li>
+                                        <a href="services.html">Engineering Team Augmentation</a>
+                                    </li>
+                                    <li>
+                                        <a href="services.html">Frontend Software Development</a>
+                                    </li>
+                                    <li>
+                                        <a href="services.html">Backend Software Development</a>
+                                    </li>
+                                    <li>
+                                        <a href="services.html">Mobile App Development</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-6">
+                                <ul class="list-unstyled footerlink">
+                                    <li>
+                                        <a href="services.html">UI/UX Design</a>
+                                    </li>
+                                    <li>
+                                        <a href="services.html">Website/Creative Development</a>
+                                    </li>
+                                    <li>
+                                        <a href="services.html">Software QA (Functional/Manual)</a>
+                                    </li>
+                                    <li>
+                                        <a href="services.html">Software QA (Automation)</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 col-12">
+                    <div class="footer-block">
+                        <h4>Company</h4>
+                        <ul class="list-unstyled footerlink">
+                            <li>
+                                <a href="about-us.html">About Us</a>
+                            </li>
+                            <li>
+                                <a href="contact-us.html">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom d-flex align-items-center justify-content-between">
+                <p>
+                    Copyright 2026. All rights reserved by <span class="text-primary">The Startup Factory</span>
+                </p>
+                <p>
+                    Designed and developed by <a href="https://www.kathart.studio/" target="_blank"
+                        class="text-primary">Kathart Studios</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section Ends -->
+
+
+    <!-- JS References -->
+    <script src="assets/js/bootstrap.min.js "></script>
+    <script src="assets/js/common.js"></script>
+    <script src="assets/js/header.js"></script>
+</body>
+
+</html>
