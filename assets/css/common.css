@@ -333,8 +333,10 @@ p {
     .sectionTitle {
         font-size: 1.5rem;
     }
+    /* Phones: the 14px root shrinks every rem, so 3rem read as cramped
+       against the stacked cards. Give the sections more breathing room. */
     .page-section {
-        padding: 3rem 0px;
+        padding: 4.5rem 0px;
     }
     .design-circle,
     .design-dots {
