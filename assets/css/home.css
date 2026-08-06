@@ -160,6 +160,7 @@ video {
     -webkit-backdrop-filter: blur(3px);
     margin-top: 1rem;
     width: 24%;
+    height: 18rem;
 }
 
 .service-block img {
@@ -170,7 +171,7 @@ video {
 
 .service-block h5 {
     font-size: 1.125rem;
-    font-weight: var(--regular);
+    font-weight: var(--medium);
     color: var(--lightgray);
     line-height: 1.4;
 }
@@ -351,12 +352,18 @@ video {
 /* --- Numbered reason cards --- */
 
 .reasonBlock.numbered {
+    position: relative;
     width: 100%;
+    min-height: 15rem;
     margin-top: 0px;
     padding: 2.5rem 2rem 2rem;
     opacity: 1;
     border: 1px solid #223253;
     transition: all 0.3s;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .reasonBlock.numbered:hover {
@@ -370,6 +377,72 @@ video {
     color: var(--primary);
     letter-spacing: 0.1em;
     margin-bottom: 0.75rem;
+}
+
+/* Hover reveal: number + title fade out, description fades in */
+
+.reasonBlock.numbered .reasonNumber,
+.reasonBlock.numbered h4 {
+    transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.reasonBlock.numbered h4 {
+    font-size: 1.75rem;
+    line-height: 1.35;
+    margin-bottom: 0px;
+}
+
+.reasonBlock.numbered p {
+    font-size: 1.155rem;
+    line-height: 1.75;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%) translateY(0.75rem);
+    padding: 0 2rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.35s ease, transform 0.35s ease, visibility 0.35s;
+}
+
+.reasonBlock.numbered:hover .reasonNumber,
+.reasonBlock.numbered:hover h4 {
+    opacity: 0;
+    transform: translateY(-0.75rem);
+}
+
+.reasonBlock.numbered:hover p {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(-50%);
+}
+
+/* Touch devices: no hover, so show everything */
+
+@media (hover: none) {
+    .reasonBlock.numbered {
+        justify-content: flex-start;
+        min-height: 0;
+    }
+
+    .reasonBlock.numbered h4 {
+        margin-bottom: 0.75rem;
+    }
+
+    .reasonBlock.numbered .reasonNumber,
+    .reasonBlock.numbered h4 {
+        opacity: 1;
+        transform: none;
+    }
+
+    .reasonBlock.numbered p {
+        position: static;
+        transform: none;
+        padding: 0;
+        opacity: 1;
+        visibility: visible;
+    }
 }
 
 /* --- Process --- */
@@ -421,6 +494,8 @@ video {
     border-radius: 0.5rem;
     padding: 1.5rem;
     flex: 1;
+    display: flex;
+    gap: 1rem;
 }
 
 .processContent h4 {
@@ -436,16 +511,22 @@ video {
 
 /* --- Comparison table --- */
 
+/* Same treatment as the CTA block: one flat fill, orange hairline border and a
+   deep shadow to lift it off the page. No per-column tints. */
+
 .compareTable {
-    border: 1px solid #223253;
-    border-radius: 1rem;
+    position: relative;
+    background: var(--lightblue);
+    border: 1px solid rgb(239 130 2 / 45%);
+    border-radius: 2rem;
     overflow: hidden;
+    box-shadow: 0 1.5rem 3rem rgb(2 9 24 / 55%);
 }
 
 .compareRow {
     display: flex;
     align-items: stretch;
-    border-bottom: 1px solid #223253;
+    border-bottom: 1px solid rgb(204 218 231 / 10%);
 }
 
 .compareRow:last-child {
@@ -454,36 +535,53 @@ video {
 
 .compareCell {
     flex: 1;
-    padding: 1.25rem 1.5rem;
-    color: #A7B5C4;
-    font-size: 1rem;
+    padding: 1.5rem 2rem;
+    background: transparent;
+    color: var(--lightgray);
+    font-size: 1.125rem;
+    font-weight: var(--bold);
     display: flex;
     align-items: center;
+    border-right: 1px solid rgb(204 218 231 / 10%);
+}
+
+.compareCell:last-child {
+    border-right: 0px;
 }
 
 .compareCell.compareLabel {
-    flex: 0 0 32%;
+    flex: 0 0 34%;
+    background: transparent;
     color: var(--lightgray);
-    font-weight: var(--medium);
-    background: rgb(27 41 71 / 60%);
+    font-weight: var(--bold);
 }
 
+/* Our column is distinguished by colour of text only, not by a fill */
+
 .compareCell.compareUs {
-    background: rgb(239 130 2 / 8%);
-    color: var(--lightgray);
-    font-weight: var(--medium);
+    background: transparent;
+    color: var(--primary);
+    font-weight: var(--bold);
+    box-shadow: none;
+}
+
+.compareRow:last-child .compareCell.compareUs {
+    box-shadow: none;
 }
 
 .compareHead {
-    background: var(--lightblue);
+    background: transparent;
+    border-bottom: 1px solid rgb(239 130 2 / 35%);
 }
 
 .compareHead .compareCell {
     font-weight: var(--bold);
-    color: var(--lightgray);
+    color: #A7B5C4;
     text-transform: uppercase;
     font-size: 0.875rem;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.08em;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
 }
 
 .compareHead .compareCell.compareUs {
@@ -493,14 +591,16 @@ video {
 /* --- Services grid additions --- */
 
 .sectionIntro {
-    max-width: 42rem;
+    max-width: 45rem;
     margin: 0px auto;
+    font-size: 1.25rem;
+    line-height: 1.5;
 }
 
 .service-block p {
     margin-top: 0.75rem;
     margin-bottom: 0px;
-    font-size: 0.95rem;
+    font-size: 1.125rem;
     line-height: 1.5;
 }
 
@@ -606,8 +706,17 @@ video {
         width: 2.5rem;
         height: 2.5rem;
     }
+    .processContent {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .compareTable {
+        border-radius: 1.25rem;
+    }
     .compareRow {
         display: block;
+        background: transparent;
+        border-bottom: 1px solid rgb(204 218 231 / 10%);
     }
     .compareHead {
         display: none;
@@ -616,18 +725,28 @@ video {
         display: flex;
         justify-content: space-between;
         gap: 1rem;
-        padding: 0.75rem 1rem;
+        padding: 0.85rem 1.25rem;
+        font-size: 0.9375rem;
+        border-right: 0px;
     }
     .compareCell.compareLabel {
         flex: 1 1 auto;
         text-transform: uppercase;
-        font-size: 0.8rem;
+        font-size: 1rem;
         letter-spacing: 0.05em;
+        padding-top: 1.25rem;
+    }
+    .compareRow:last-child .compareCell:last-child {
+        padding-bottom: 1.25rem;
     }
     .compareCell[data-label]::before {
         content: attr(data-label);
-        color: #6C7793;
-        font-size: 0.8rem;
+        color: #A7B5C4;
+        font-size: 1rem;
+        font-weight: var(--bold);
+    }
+    .compareCell.compareUs[data-label]::before {
+        color: #A7B5C4;
     }
     .faqQuestion {
         font-size: 1rem;

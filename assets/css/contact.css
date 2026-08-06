@@ -14,11 +14,21 @@
     font-weight: var(--bold);
 }
 
+/* Source colour was --blue (#0C55BE), which all but disappears on the dark
+   card. Render light and reserve the brighter state for hover, matching the
+   home and about page icon treatment. */
+
 .contact-block i {
     font-size: 3rem;
     display: block;
     margin: 0px auto 1rem auto;
-    color: var(--blue);
+    color: var(--white);
+    opacity: 0.85;
+    transition: all 0.3s;
+}
+
+.contact-block:hover i {
+    opacity: 1;
 }
 
 iframe {
@@ -93,9 +103,9 @@ iframe {
 
 /* --- Change list #1/#7: map removed, form is the page's primary action --- */
 
-.contact-block {
+/* .contact-block {
     width: 32%;
-}
+} */
 
 .contact-block a {
     color: #A7B5C4;
@@ -116,7 +126,7 @@ iframe {
 }
 
 .contactNote {
-    font-size: 0.875rem;
+    font-size: 1.125rem;
     color: #6C7793;
     margin-top: 0.5rem;
 }
