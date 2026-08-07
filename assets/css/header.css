@@ -11,8 +11,20 @@ header {
     width: fit-content;
 }
 
+/* Square mark: sized to the header rhythm rather than stretched to the
+   column. A subtle lift on hover keeps it feeling clickable. */
 #logo img {
+    width: 4.5rem;
+    height: 4.5rem;
     max-width: 100%;
+    display: block;
+    object-fit: contain;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+#logo:hover img {
+    transform: scale(1.06);
+    filter: drop-shadow(0 0.25rem 0.75rem rgba(239, 130, 2, 0.45));
 }
 
 .navigation li {
@@ -55,7 +67,10 @@ header {
 }
 
 .menuHeader img {
-    max-width: 6rem;
+    width: 3.25rem;
+    height: 3.25rem;
+    max-width: 100%;
+    object-fit: contain;
 }
 
 .menuClose {

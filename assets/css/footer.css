@@ -32,12 +32,46 @@
 }
 
 footer {
-    padding: 12rem 0px 2rem;
+    padding: 13rem 0px 3rem;
     background: var(--lightblue);
     border-radius: 10rem 10rem 0px 0px;
     margin-top: -6rem;
     position: relative;
     z-index: 1;
+}
+
+/* --- Footer brand block ---
+   Logo lockup sits above the link columns, separated by a hairline rule,
+   so the footer opens with the mark rather than straight into lists. */
+
+.footer-brand {
+    padding-bottom: 3rem;
+    margin-bottom: 3.5rem;
+    border-bottom: 1px solid #223253;
+}
+
+.footer-logo {
+    display: inline-block;
+    width: fit-content;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.footer-logo img {
+    width: 11rem;
+    max-width: 100%;
+    display: block;
+}
+
+.footer-logo:hover {
+    transform: translateY(-2px);
+    filter: drop-shadow(0 0.5rem 1rem rgba(239, 130, 2, 0.35));
+}
+
+.footer-tagline {
+    color: #A7B5C4;
+    max-width: 34rem;
+    margin: 1.25rem 0px 0px;
+    line-height: 1.7;
 }
 
 .footer-block h4 {
@@ -76,9 +110,16 @@ footer {
 }
 
 .footer-bottom {
-    margin-top: 2rem;
+    margin-top: 4rem;
     padding-top: 2rem;
     border-top: 1px solid #223253;
+    gap: 1rem;
+}
+
+.footer-bottom p {
+    margin-bottom: 0px;
+    color: #8595A8;
+    font-size: 0.9375rem;
 }
 
 @media screen and (max-width:992px) {
@@ -89,8 +130,12 @@ footer {
         padding: 2.5rem;
     }
     footer {
-        padding-top: 10rem;
+        padding-top: 11rem;
         border-radius: 5rem 5rem 0px 0px;
+    }
+    .footer-brand {
+        padding-bottom: 2.5rem;
+        margin-bottom: 3rem;
     }
 }
 
@@ -116,7 +161,28 @@ footer {
         padding-top: 2rem;
     }
     footer {
-        padding-top: 8rem;
+        padding-top: 9rem;
         border-radius: 3rem 3rem 0px 0px;
     }
+    .footer-brand {
+        padding-bottom: 2rem;
+        margin-bottom: 2.5rem;
+        text-align: center;
+    }
+    .footer-logo {
+        margin: 0px auto;
+    }
+    .footer-tagline {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .footer-bottom {
+        margin-top: 3rem;
+    }
+}
+
+.footer-columns{
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
 }
